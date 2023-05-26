@@ -59,7 +59,8 @@ exports.signin = async (req, res) => {
             message: `Cant login with user status as ${user.userStatus}.`
         });
     }
-
+    console.log('user.password<><'+user.password);
+    console.log('req.body.password<><'+req.body.password);
     if (!bcrypt.compareSync(req.body.password, user.password)) {
         return res.status(200).send({
             message: "Invalid password"

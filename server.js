@@ -30,3 +30,4 @@ app.get('/testRoute',(req,res) => {
 
 require('./routes/auth.route')(app);
 require('./routes/user.route')(app);
+require('./routes/ticket.route')(app);

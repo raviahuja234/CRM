@@ -13,3 +13,17 @@ exports.userResponse = (users) => {
 
     return userResult;
 }
+
+exports.ticketResponse = (ticket) => {
+    return {
+        title: ticket.title,
+        description: ticket.description,
+        ticketPriority: ticket.ticketPriority,
+        status: ticket.status, 
+        reporter: ticket.reporter,
+        assignee: ticket.assignee,
+        id: ticket._id,
+        createdAt: ticket.createdAt,
+        updatedAt: ticket.updatedAt,
+    }
+}

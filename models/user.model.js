@@ -35,15 +35,19 @@ const userSchema = new mongoose.Schema({
     userType:{
         type:String,
         required:true,
-        default:"Customer"
+        default:"CUSTOMER"
     },
    userStatus:{
         type:String,
-        default:"Approved",        
+        default:"APPROVED",        
     },
-    phoneNumber:{
-        type:Number,
-        required:true
+    ticketsCreated:{
+        type:[mongoose.SchemaTypes.ObjectId],
+        ref:"Ticket"
+    },
+    ticketAssigned:{
+        type:[mongoose.SchemaTypes.ObjectId],
+        ref:"Ticket"
     }
 });
 
